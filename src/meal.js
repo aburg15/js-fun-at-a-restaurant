@@ -11,20 +11,20 @@ function createMenuItem(name, price, type) {
   return menuItem;
 };
 
-function addIngredients(topping1, toppings) {
-  if (toppings.includes(topping1)) {
-    return topping1
+function addIngredients(topping, ingredients) {
+  if (ingredients.includes(topping)) {
+    return topping
   } else {
-    return toppings.push(topping1)
+    return ingredients.push(topping)
   }
 };
 
-function formatPrice(initialPrice) {
-  return `$${initialPrice}`;
+function formatPrice(price) {
+  return `$${price}`;
 };
 
-function decreasePrice(decreasedPrice) {
-  return decreasedPrice * .90;
+function decreasePrice(newPrice) {
+  return newPrice * .90;
 };
 
 function createRecipe(title, ingredients, type) {
