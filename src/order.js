@@ -4,10 +4,10 @@ function takeOrder(order, deliveryOrders) {
 };
 
 function refundOrder(order, deliveryOrders) {
-  if (order === 1657) {
-    deliveryOrders.splice(0, 1);
-  } else {
-    deliveryOrders.splice(1, 1);
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (deliveryOrders[i].orderNumber === order) {
+      deliveryOrders.splice(i, 1);
+    }
   }
 };
 
